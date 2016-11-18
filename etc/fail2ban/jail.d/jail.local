@@ -1,0 +1,19 @@
+[DEFAULT]
+
+#ignoreip = 127.0.0.1/8 myFallbackIp
+findtime = 60000
+backend = pyinotify
+usedns = no
+
+
+[ssh]
+enabled  = false
+
+[ssh-custom]
+enabled  = true
+port     = ssh
+# sshd(sic!)
+filter   = sshd-custom
+bantime = 60000
+logpath  = /var/log/auth.log
+maxretry = 3
